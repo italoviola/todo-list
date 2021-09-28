@@ -1,6 +1,6 @@
 .todo-list-tasks
   &_task
-    height: 32px
+    min-height: 32px
     background-color: $grey-eee
     display: flex
     flex-flow: row nowrap
@@ -14,9 +14,18 @@
       font-family: $font
       font-size: 16px
       color: $grey-606
+      max-width: 100%
+      word-break: break-word
 
     &--remove
+      position: relative
+      margin-left: 16px
       cursor: pointer
+      width: 12px
 
       img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
         height: 16px
