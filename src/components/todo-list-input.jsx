@@ -27,10 +27,11 @@ function TodoListInput(props) {
       <form className="todo-list-input_form" onSubmit={handleSubmit}>
         <input 
           className="todo-list-input_form--description-field"
-          type="text" 
+          type="text"
           value={description} 
           placeholder="Digite"
           onChange={handleDescriptionChange}  
+          required
         />
         <button
           className="todo-list-input_form--add-field"
