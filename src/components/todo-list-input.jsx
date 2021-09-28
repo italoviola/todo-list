@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 function TodoListInput(props) {
 
-  const [task, setTask] = useState(''); 
+  const [id, setId] = useState(0);
+  const [task, setTask] = useState('');
 
   const handleTaskChange = (event) => {
     setTask(event.target.value)
@@ -12,10 +13,12 @@ function TodoListInput(props) {
     event.preventDefault()
     
     props.onSubmit({
+      id: id,
       task: task
     })
 
     setTask('')
+    setId(id + 1)
   }
 
   return (

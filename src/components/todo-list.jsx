@@ -8,15 +8,21 @@ function TodoList() {
 
   const addTasks = (task) => {
     const newTasks = [task, ...tasks]
+    setTasks(newTasks)
+  }
 
+  const removeTask = (task) => {
+    const newTasks = [...tasks].filter((obj) => {
+      return obj.id !== task.id;
+    })
     setTasks(newTasks)
   }
 
   return (
     <div className="todo-list">
       <TodoListInput onSubmit={addTasks}/>
-      {tasks.map((item, index)=>{
-        return <TodoListTask key={index} task={item.task} />
+      {tasks.map((item)=>{
+        return <TodoListTask key={item.id} {...item} onClick={removeTask}/>
       })}
     </div>
   );
