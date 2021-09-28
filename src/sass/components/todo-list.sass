@@ -11,5 +11,20 @@
     min-height: 280px
 
     &.-no-tasks
-      background: #F2F2F2
-      border: 1px dashed #CCCCCC
+      background: $white-f2f
+      border: 1px dashed $grey
+
+    .no-tasks-disclaimer
+      height: 280px
+      width: 100%
+      position: relative
+
+      span
+        position: absolute
+        display: block
+        font-family: $font
+        font-size: 12px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: $grey-606
