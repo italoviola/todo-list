@@ -12,12 +12,10 @@ function TodoListInput(props) {
     event.preventDefault()
     
     props.onSubmit({
-      task: event.target.value
+      task: task
     })
 
     setTask('')
-    
-    console.log('task', task)
   }
 
   return (
