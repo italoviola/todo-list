@@ -21,9 +21,11 @@ function TodoList() {
   return (
     <div className="todo-list">
       <TodoListInput onSubmit={addTasks}/>
-      {tasks.map((item)=>{
-        return <TodoListTask key={item.id} {...item} onClick={removeTask}/>
-      })}
+      <div className={`todo-list-tasks ${ tasks.length > 0 ? '' : '-no-tasks'}`}>
+        {tasks.map((item)=>{
+          return <TodoListTask key={item.id} {...item} onClick={removeTask}/>
+        })}
+      </div>
     </div>
   );
 }

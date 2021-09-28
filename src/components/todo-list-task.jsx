@@ -7,9 +7,9 @@ function TodoListTask(props) {
   }
 
   return (
-    <div className="todo-list-task">
-      <div className="todo-list-task_description">{props.description}</div>
-      <div className="todo-list-task_remove" onClick={handleClickRemoveTask}>X</div>
+    <div className="todo-list-tasks_task">
+      <div className="todo-list-tasks_task--description">{props.description}</div>
+      <div className="todo-list-tasks_task--remove" onClick={handleClickRemoveTask}>X</div>
     </div>
   );
 }

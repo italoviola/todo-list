@@ -23,14 +23,19 @@ function TodoListInput(props) {
 
   return (
     <div className="todo-list-input">
-      <form onSubmit={handleSubmit}>
+      <form className="todo-list-input_form" onSubmit={handleSubmit}>
         <input 
+          className="todo-list-input_form--description-field"
           type="text" 
           value={description} 
           placeholder="Banana"
           onChange={handleDescriptionChange}  
         />
-        <input type="submit" value="+"/>
+        <input
+          className="todo-list-input_form--add-field"
+          type="submit" 
+          value="+"
+        />
       </form>
     </div>
   );
