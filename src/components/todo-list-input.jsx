@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 function TodoListInput(props) {
 
   const [id, setId] = useState(0);
-  const [task, setTask] = useState('');
+  const [description, setDescription] = useState('');
 
-  const handleTaskChange = (event) => {
-    setTask(event.target.value)
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value)
   }
 
   const handleSubmit = (event) => {
@@ -14,10 +14,10 @@ function TodoListInput(props) {
     
     props.onSubmit({
       id: id,
-      task: task
+      description: description
     })
 
-    setTask('')
+    setDescription('')
     setId(id + 1)
   }
 
@@ -26,9 +26,9 @@ function TodoListInput(props) {
       <form onSubmit={handleSubmit}>
         <input 
           type="text" 
-          value={task} 
+          value={description} 
           placeholder="Banana"
-          onChange={handleTaskChange}  
+          onChange={handleDescriptionChange}  
         />
         <input type="submit" value="+"/>
       </form>
