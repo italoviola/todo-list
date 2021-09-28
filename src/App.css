@@ -68,6 +68,9 @@
   cursor: pointer;
   z-index: 9;
 }
+.todo-list-input_form--add-field img {
+  width: 24px;
+}
 .todo-list-input_form--add-field:active {
   opacity: 0.4;
 }
@@ -90,6 +93,9 @@
 }
 .todo-list-tasks_task--remove {
   cursor: pointer;
+}
+.todo-list-tasks_task--remove img {
+  height: 16px;
 }
 
 .App {

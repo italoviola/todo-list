@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import deleteIcon from '../assets/ic-delete.png';
 
 function TodoListTask(props) {
 
@@ -9,7 +10,9 @@ function TodoListTask(props) {
   return (
     <div className="todo-list-tasks_task">
       <div className="todo-list-tasks_task--description">{props.description}</div>
-      <div className="todo-list-tasks_task--remove" onClick={handleClickRemoveTask}>X</div>
+      <div className="todo-list-tasks_task--remove" onClick={handleClickRemoveTask}>
+        <img src={deleteIcon} alt="Delete task" />
+      </div>
     </div>
   );
 }

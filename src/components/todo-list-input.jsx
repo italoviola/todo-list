@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import addIcon from '../assets/ic-add.png';
 
 function TodoListInput(props) {
 
@@ -28,14 +29,16 @@ function TodoListInput(props) {
           className="todo-list-input_form--description-field"
           type="text" 
           value={description} 
-          placeholder="Banana"
+          placeholder="Digite"
           onChange={handleDescriptionChange}  
         />
-        <input
+        <button
           className="todo-list-input_form--add-field"
           type="submit" 
-          value="+"
-        />
+          value=""
+        >
+          <img src={addIcon} alt="Add task" />
+        </button>
       </form>
     </div>
   );
