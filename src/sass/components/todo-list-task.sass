@@ -1,31 +1,31 @@
 .todo-list-tasks
   &_task
-    min-height: 32px
     background-color: $grey-eee
+    box-sizing: border-box
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
-    width: 100%
     margin-bottom: 8px
+    min-height: 32px
     padding: 8px 16px
-    box-sizing: border-box
+    width: 100%
 
     &--description
+      color: $grey-606
       font-family: $font
       font-size: 16px
-      color: $grey-606
       max-width: 100%
       word-break: break-word
 
     &--remove
-      position: relative
-      margin-left: 16px
       cursor: pointer
+      margin-left: 16px
+      position: relative
       width: 12px
 
       img
+        height: 16px
+        left: 50%
         position: absolute
         top: 50%
-        left: 50%
         transform: translate(-50%, -50%)
-        height: 16px
