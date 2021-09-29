@@ -11,7 +11,7 @@
   "scripts": {
     "start": "react-scripts start & yarn run sass-watch",
     "sass-watch": "yarn sass --watch src/sass/App.sass:src/App.css",
-    "build": "react-scripts build & yarn sass src/sass/App.sass:src/App.css",
+    "build": "yarn sass src/sass/App.sass:src/App.css & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
