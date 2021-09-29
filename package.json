@@ -9,9 +9,9 @@
     "sass": "^1.42.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start & yarn run sass-watch",
     "sass-watch": "yarn sass --watch src/sass/App.sass:src/App.css",
-    "build": "react-scripts build",
+    "build": "react-scripts build & yarn sass src/sass/App.sass:src/App.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
